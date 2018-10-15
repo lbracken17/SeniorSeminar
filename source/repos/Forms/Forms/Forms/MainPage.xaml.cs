@@ -16,8 +16,9 @@ namespace Forms
         {
             InitializeComponent();
             var locator = CrossGeolocator.Current;
-            if (IsLocationAvailable())
-                map.IsShowingUser = true;
+            //if (IsLocationAvailable())
+              //  map.IsShowingUser = true;
+            //map.IsShowingUser = true;
             map.MoveToRegion(MapSpan.FromCenterAndRadius(new Position(44.011, -73.18), Distance.FromMiles(1)));
         }
 
