@@ -4,6 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Xamarin.Forms;
+using Plugin;
+using Plugin.Geolocator;
+using Xamarin.Forms.Maps;
 
 namespace Forms
 {
@@ -12,16 +15,34 @@ namespace Forms
         public MainPage()
         {
             InitializeComponent();
+            var locator = CrossGeolocator.Current;
+            if (IsLocationAvailable())
+                map.IsShowingUser = true;
+            map.MoveToRegion(MapSpan.FromCenterAndRadius(new Position(44.011, -73.18), Distance.FromMiles(1)));
+        }
+
+        public bool IsLocationAvailable()
+        {
+            if (!CrossGeolocator.IsSupported)
+                return false;
+
+            return CrossGeolocator.Current.IsGeolocationAvailable;
         }
 
         void OnRouteClick(object sender, EventArgs args)
         {
+            
             String start = origin.Text.ToUpper();
             String end = destination.Text.ToUpper();
             end = Buildings(end);
             start = Buildings(start);
             route.Text = "";
-            route.Text = String.Format("Routing from {0} to {1}.", start, end);
+            if (start == "ERROR.")
+                route.Text = "Unfortunately, your start location is not recognized.";
+            else if (end == "ERROR.")
+                route.Text = "Unfortunately, your destination is not recognized.";
+            else
+                route.Text = String.Format("Routing from {0} to {1}.", start, end);
         }
 
         String Buildings (String buildingCode)
@@ -131,7 +152,7 @@ namespace Forms
             else if (buildingCode == "WTH THE")
                 return "Wright Theater";
             else
-                return "ERROR. CODE NOT RECOGNIZED.";
+                return "ERROR.";
 
 
 

@@ -26,6 +26,15 @@
           "build/netstandard2.0/NETStandard.Library.targets": {}
         }
       },
+      "Xam.Plugin.Geolocator/4.5.0.6": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/Plugin.Geolocator.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Plugin.Geolocator.dll": {}
+        }
+      },
       "Xamarin.Forms/3.1.0.697729": {
         "type": "package",
         "compile": {
@@ -199,6 +208,31 @@
         "lib/netstandard1.0/_._",
         "netstandard.library.2.0.3.nupkg.sha512",
         "netstandard.library.nuspec"
+      ]
+    },
+    "Xam.Plugin.Geolocator/4.5.0.6": {
+      "sha512": "Ro7peBDxsDXPc7J7yLx0ekAcXIfVTAXj/rXiBKiTgZ4Lm7KZJIU8PXOCcI4JztzT3MQrL8Rmka48il/ix0pwoA==",
+      "type": "package",
+      "path": "xam.plugin.geolocator/4.5.0.6",
+      "files": [
+        "lib/monoandroid71/Plugin.Geolocator.dll",
+        "lib/monoandroid71/Plugin.Geolocator.xml",
+        "lib/netstandard1.0/Plugin.Geolocator.dll",
+        "lib/netstandard1.0/Plugin.Geolocator.xml",
+        "lib/netstandard2.0/Plugin.Geolocator.dll",
+        "lib/netstandard2.0/Plugin.Geolocator.xml",
+        "lib/uap10.0.10240/Plugin.Geolocator.dll",
+        "lib/uap10.0.10240/Plugin.Geolocator.pri",
+        "lib/uap10.0.10240/Plugin.Geolocator.xml",
+        "lib/xamarinios10/Plugin.Geolocator.dll",
+        "lib/xamarinios10/Plugin.Geolocator.xml",
+        "lib/xamarinmac20/Plugin.Geolocator.dll",
+        "lib/xamarinmac20/Plugin.Geolocator.xml",
+        "lib/xamarintvos10/Plugin.Geolocator.dll",
+        "lib/xamarintvos10/Plugin.Geolocator.xml",
+        "readme.txt",
+        "xam.plugin.geolocator.4.5.0.6.nupkg.sha512",
+        "xam.plugin.geolocator.nuspec"
       ]
     },
     "Xamarin.Forms/3.1.0.697729": {
@@ -385,6 +419,7 @@
   "projectFileDependencyGroups": {
     ".NETStandard,Version=v2.0": [
       "NETStandard.Library >= 2.0.3",
+      "Xam.Plugin.Geolocator >= 4.5.0.6",
       "Xamarin.Forms >= 3.1.0.697729",
       "Xamarin.Forms.Maps >= 3.1.0.697729"
     ]
@@ -435,6 +470,10 @@
             "target": "Package",
             "version": "[2.0.3, )",
             "autoReferenced": true
+          },
+          "Xam.Plugin.Geolocator": {
+            "target": "Package",
+            "version": "[4.5.0.6, )"
           },
           "Xamarin.Forms": {
             "target": "Package",
