@@ -30,9 +30,6 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <AndroidLinkMode>None</AndroidLinkMode>
-    <AotAssemblies>false</AotAssemblies>
-    <EnableLLVM>false</EnableLLVM>
-    <BundleAssemblies>false</BundleAssemblies>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -101,7 +98,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Forms\Forms.csproj">
-      <Project>{D4946A1B-D159-47A0-A7AC-AE0FE5394E3C}</Project>
+      <Project>{06BCDA29-1ADA-4255-8624-433D40304556}</Project>
       <Name>Forms</Name>
     </ProjectReference>
   </ItemGroup>

@@ -1,0 +1,14 @@
+﻿<Properties StartupConfiguration="{C8012840-2676-4BB1-B288-F219250D87E3}|Default">
+  <MonoDevelop.Ide.ItemProperties.Forms.Android PreferredExecutionTarget="Android.Android_Accelerated_Oreo" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Forms/Forms.Android/MainActivity.cs">
+    <Files>
+      <File FileName="Forms/Forms.Android/MainActivity.cs" Line="1" Column="1" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MultiItemStartupConfigurations />
+</Properties>
