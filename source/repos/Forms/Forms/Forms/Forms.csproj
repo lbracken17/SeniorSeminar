@@ -13,7 +13,7 @@
     <Content Include="..\Forms.Android\Properties\AndroidManifest.xml" Link="AndroidManifest.xml" />
   </ItemGroup>
 
-  <ItemGroup>
+  <ItemGroup> 
 <<<<<<< HEAD
     <PackageReference Include="Xamarin.Forms" Version="3.2.0.871581" />
     <PackageReference Include="Xamarin.Forms.Maps" Version="3.2.0.871581" />

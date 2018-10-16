@@ -471,24 +471,6 @@
         "build": {
           "build/MonoAndroid70/Xamarin.GooglePlayServices.Tasks.targets": {}
         }
-<<<<<<< HEAD
-=======
-      },
-      "Forms/1.0.0": {
-        "type": "project",
-        "framework": ".NETStandard,Version=v2.0",
-        "dependencies": {
-          "Xam.Plugin.Geolocator": "4.5.0.6",
-          "Xamarin.Forms": "3.1.0.697729",
-          "Xamarin.Forms.Maps": "3.1.0.697729"
-        },
-        "compile": {
-          "bin/placeholder/Forms.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/Forms.dll": {}
-        }
->>>>>>> 8d09110620ff87ea9ff2688998c5c6e9592c4ab4
       }
     }
   },
@@ -856,11 +838,13 @@
         "lib/MonoAndroid10/Design/Xamarin.Forms.Core.Design.dll",
         "lib/MonoAndroid10/Design/Xamarin.Forms.Xaml.Design.dll",
         "lib/MonoAndroid10/FormsViewGroup.dll",
+        "lib/MonoAndroid10/FormsViewGroup.dll.mdb",
         "lib/MonoAndroid10/FormsViewGroup.pdb",
         "lib/MonoAndroid10/Xamarin.Forms.Core.dll",
         "lib/MonoAndroid10/Xamarin.Forms.Core.pdb",
         "lib/MonoAndroid10/Xamarin.Forms.Core.xml",
         "lib/MonoAndroid10/Xamarin.Forms.Platform.Android.dll",
+        "lib/MonoAndroid10/Xamarin.Forms.Platform.Android.dll.mdb",
         "lib/MonoAndroid10/Xamarin.Forms.Platform.Android.pdb",
         "lib/MonoAndroid10/Xamarin.Forms.Platform.dll",
         "lib/MonoAndroid10/Xamarin.Forms.Xaml.dll",
@@ -1055,11 +1039,8 @@
   },
   "projectFileDependencyGroups": {
     "MonoAndroid,Version=v8.1": [
-<<<<<<< HEAD
-=======
-      "Forms >= 1.0.0",
       "Plugin.CurrentActivity >= 2.1.0.4",
->>>>>>> 8d09110620ff87ea9ff2688998c5c6e9592c4ab4
+      "Xam.Plugin.Geolocator >= 4.5.0.6",
       "Xamarin.Android.Support.Design >= 27.0.2.1",
       "Xamarin.Android.Support.v4 >= 27.0.2.1",
       "Xamarin.Android.Support.v7.AppCompat >= 27.0.2.1",
@@ -1099,15 +1080,11 @@
     "frameworks": {
       "monoandroid81": {
         "dependencies": {
-<<<<<<< HEAD
-          "Xamarin.Forms": {
-=======
           "Plugin.CurrentActivity": {
             "target": "Package",
-            "version": "[2.1.0.4, )"
+            "version": "2.1.0.4"
           },
-          "Xamarin.Android.Support.Design": {
->>>>>>> 8d09110620ff87ea9ff2688998c5c6e9592c4ab4
+          "Xamarin.Forms": {
             "target": "Package",
             "version": "3.1.0.697729"
           },
@@ -1134,6 +1111,10 @@
           "Xamarin.Forms.Maps": {
             "target": "Package",
             "version": "3.1.0.697729"
+          },
+          "Xam.Plugin.Geolocator": {
+            "target": "Package",
+            "version": "4.5.0.6"
           }
         }
       }
