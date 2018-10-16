@@ -53,6 +53,12 @@ namespace Forms.Droid
                             //TODO add more permissions
                             Manifest.Permission.AccessCoarseLocation,
                             Manifest.Permission.AccessFineLocation,
+                            Manifest.Permission.AccessLocationExtraCommands,
+                            Manifest.Permission.AccessMockLocation,
+                            Manifest.Permission.AccessNetworkState,
+                            Manifest.Permission.AccessWifiState,
+                            Manifest.Permission.Internet
+
              };
         async Task GetPermissionsAsync()
         {

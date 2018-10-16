@@ -9,3 +9,4 @@ C:\Users\William\source\repos\Forms\Forms\Forms\obj\Debug\netstandard2.0\Forms.A
 C:\Users\William\source\repos\Forms\Forms\Forms\obj\Debug\netstandard2.0\Forms.dll
 C:\Users\William\source\repos\Forms\Forms\Forms\obj\Debug\netstandard2.0\Forms.pdb
 C:\Users\William\source\repos\Forms\Forms\Forms\obj\Debug\netstandard2.0\XamlC.stamp
+C:\Users\William\source\repos\Forms\Forms\Forms\obj\Debug\netstandard2.0\Forms.csprojAssemblyReference.cache
