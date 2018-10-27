@@ -10,3 +10,6 @@ C:\Users\William\source\repos\Forms\Forms\Forms\obj\Debug\netstandard2.0\Forms.d
 C:\Users\William\source\repos\Forms\Forms\Forms\obj\Debug\netstandard2.0\Forms.pdb
 C:\Users\William\source\repos\Forms\Forms\Forms\obj\Debug\netstandard2.0\XamlC.stamp
 C:\Users\William\source\repos\Forms\Forms\Forms\obj\Debug\netstandard2.0\Forms.csprojAssemblyReference.cache
+C:\Users\William\source\repos\Forms\Forms\Forms\bin\Debug\netstandard2.0\Xamarin.GooglePlayServices.Maps.dll
+C:\Users\William\source\repos\Forms\Forms\Forms\bin\Debug\netstandard2.0\Xamarin.GooglePlayServices.Basement.dll
+C:\Users\William\source\repos\Forms\Forms\Forms\obj\Debug\netstandard2.0\Forms.csproj.CopyComplete

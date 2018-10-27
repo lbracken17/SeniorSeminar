@@ -441,6 +441,23 @@
           "build/MonoAndroid70/Xamarin.GooglePlayServices.Basement.targets": {}
         }
       },
+      "Xamarin.GooglePlayServices.Location/42.1021.1": {
+        "type": "package",
+        "dependencies": {
+          "Xamarin.GooglePlayServices.Base": "[42.1021.1]",
+          "Xamarin.GooglePlayServices.Basement": "[42.1021.1]",
+          "Xamarin.GooglePlayServices.Tasks": "[42.1021.1]"
+        },
+        "compile": {
+          "lib/MonoAndroid70/Xamarin.GooglePlayServices.Location.dll": {}
+        },
+        "runtime": {
+          "lib/MonoAndroid70/Xamarin.GooglePlayServices.Location.dll": {}
+        },
+        "build": {
+          "build/MonoAndroid70/Xamarin.GooglePlayServices.Location.targets": {}
+        }
+      },
       "Xamarin.GooglePlayServices.Maps/42.1021.1": {
         "type": "package",
         "dependencies": {
@@ -1022,6 +1039,18 @@
         "xamarin.googleplayservices.basement.nuspec"
       ]
     },
+    "Xamarin.GooglePlayServices.Location/42.1021.1": {
+      "sha512": "EtZYtTuSqksNHpbzvwCnnhBSDPMFn0XTVKdld3yvhi/gm/3ZMG3+GMykcsRcSXOrF86NGgy/F66+K2LFrDnA1w==",
+      "type": "package",
+      "path": "xamarin.googleplayservices.location/42.1021.1",
+      "files": [
+        ".signature.p7s",
+        "build/MonoAndroid70/Xamarin.GooglePlayServices.Location.targets",
+        "lib/MonoAndroid70/Xamarin.GooglePlayServices.Location.dll",
+        "xamarin.googleplayservices.location.42.1021.1.nupkg.sha512",
+        "xamarin.googleplayservices.location.nuspec"
+      ]
+    },
     "Xamarin.GooglePlayServices.Maps/42.1021.1": {
       "sha512": "h/t3VRjDzSUqFw1IfZzeut18+tuzAsHBXtPhrnxB2Bt1izxC7JUQOAxeDR8Y49mVH4qQZwOMh/aushGeaSdmXQ==",
       "type": "package",
@@ -1060,7 +1089,9 @@
       "Xamarin.Android.Support.v7.CardView >= 27.0.2.1",
       "Xamarin.Android.Support.v7.MediaRouter >= 27.0.2.1",
       "Xamarin.Forms >= 3.1.0.697729",
-      "Xamarin.Forms.Maps >= 3.1.0.697729"
+      "Xamarin.Forms.Maps >= 3.1.0.697729",
+      "Xamarin.GooglePlayServices.Location >= 42.1021.1",
+      "Xamarin.GooglePlayServices.Maps >= 42.1021.1"
     ]
   },
   "packageFolders": {
@@ -1131,6 +1162,14 @@
           "Xamarin.Forms.Maps": {
             "target": "Package",
             "version": "[3.1.0.697729, )"
+          },
+          "Xamarin.GooglePlayServices.Location": {
+            "target": "Package",
+            "version": "[42.1021.1, )"
+          },
+          "Xamarin.GooglePlayServices.Maps": {
+            "target": "Package",
+            "version": "[42.1021.1, )"
           }
         }
       }

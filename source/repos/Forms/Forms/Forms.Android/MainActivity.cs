@@ -12,6 +12,11 @@ using Plugin.Geolocator;
 using Plugin.Permissions;
 using Android;
 using System.Threading.Tasks;
+using Xamarin.Forms.Maps;
+using Android.Support.V4.Content;
+using Android.Gms.Maps;
+using Android.Gms.Maps.Model;
+
 
 namespace Forms.Droid
 {
@@ -26,14 +31,24 @@ namespace Forms.Droid
             ToolbarResource = Resource.Layout.Toolbar;
             base.OnCreate(savedInstanceState);
             global::Xamarin.Forms.Forms.Init(this, savedInstanceState);
+
+            //var polylineOptions = new PolylineOptions();
+            //polylineOptions.Add(new LatLng(44.011, -73.18));
+            //map.AddPolyline(polylineOptions);
+
             Xamarin.FormsMaps.Init(this, savedInstanceState);
             CrossCurrentActivity.Current.Init(this, savedInstanceState);
 
+
             //var position = await locator.GetPositionAsync(TimeSpan.FromSeconds(10));
+
+           
             LoadApplication(new App());
 
 
         }
+
+       
 
 
         async Task TryToGetPermissions()

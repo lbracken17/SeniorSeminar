@@ -9,11 +9,11 @@
 
     <StackLayout>
         <!-- Place new controls here -->
-        <Entry x:Name="origin" Placeholder="Start location" />
-        <Entry x:Name="destination" Placeholder="Destination" />
+        <Entry x:Name="origin" Placeholder="Start location (3 or 6 digit building code. e.g. MBH)" />
+        <Entry x:Name="destination" Placeholder="Destination (3 or 6 digit building code. e.g. MBH)" />
         <Button x:Name="routeButton" Text="Route" Clicked="OnRouteClick" />
         <Label x:Name="route" Text="" />
-        <maps:Map x:Name="map" MapType="Street" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand"   />
+        <maps:Map x:Name="map" IsShowingUser="True" MapType="Street" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand"   />
 
             <!--<Label Text="You have an API key!" 
            HorizontalOptions="Center"

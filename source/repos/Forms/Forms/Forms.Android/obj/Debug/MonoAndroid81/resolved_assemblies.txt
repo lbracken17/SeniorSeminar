@@ -40,6 +40,7 @@ C:\Users\William\source\repos\Forms\Forms\Forms.Android\obj\Debug\MonoAndroid81\
 C:\Users\William\source\repos\Forms\Forms\Forms.Android\obj\Debug\MonoAndroid81\android\assets\Xamarin.GooglePlayServices.Tasks.dll
 C:\Users\William\source\repos\Forms\Forms\Forms.Android\obj\Debug\MonoAndroid81\android\assets\Xamarin.GooglePlayServices.Base.dll
 C:\Users\William\source\repos\Forms\Forms\Forms.Android\obj\Debug\MonoAndroid81\android\assets\Xamarin.GooglePlayServices.Maps.dll
+C:\Users\William\source\repos\Forms\Forms\Forms.Android\obj\Debug\MonoAndroid81\android\assets\Xamarin.GooglePlayServices.Location.dll
 C:\Users\William\source\repos\Forms\Forms\Forms.Android\obj\Debug\MonoAndroid81\android\assets\netstandard.dll
 C:\Users\William\source\repos\Forms\Forms\Forms.Android\obj\Debug\MonoAndroid81\android\assets\System.Data.dll
 C:\Users\William\source\repos\Forms\Forms\Forms.Android\obj\Debug\MonoAndroid81\android\assets\System.Numerics.dll
