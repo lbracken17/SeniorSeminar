@@ -127,6 +127,13 @@ namespace Forms
                 };
                 map.Pins.Add(pinDest);
             }
+            // there needs to be an alert for FIC but I don't even know what to say about that place...
+            // there should be another for Johnson but I don't know the layout well enough
+            // there should be something for Ross
+            if (end == "MBH")
+                DisplayAlert("BiHall", "Note: You will enter onto either the 2nd or 3rd floor.", "OK");
+            if (end == "WNS")
+                DisplayAlert("Warner", "Note: You will enter on the 2nd floor. The staircase to the left only goes to floors 2, 3, and 5.", "OK");
             end = Buildings(end);
             start = Buildings(start);
             route.Text = "";
