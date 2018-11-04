@@ -1,7 +1,7 @@
 {
   "runtimeTarget": {
     "name": ".NETStandard,Version=v2.0/",
-    "signature": "4011ab35525b24736091e5efedc4c84afcd05bee"
+    "signature": "4d594b770d315984d7b355bf22d43bd8184c8e9e"
   },
   "compilationOptions": {},
   "targets": {
@@ -12,7 +12,8 @@
           "NETStandard.Library": "2.0.3",
           "Xam.Plugin.Geolocator": "4.5.0.6",
           "Xamarin.Forms": "3.1.0.697729",
-          "Xamarin.Forms.Maps": "3.1.0.697729"
+          "Xamarin.Forms.Maps": "3.1.0.697729",
+          "Xamarin.GooglePlayServices": "27.0.0"
         },
         "runtime": {
           "Forms.dll": {}
@@ -62,7 +63,8 @@
             "fileVersion": "2.0.0.0"
           }
         }
-      }
+      },
+      "Xamarin.GooglePlayServices/27.0.0": {}
     }
   },
   "libraries": {
@@ -74,7 +76,7 @@
     "Microsoft.NETCore.Platforms/1.1.0": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-bLpT1f/SFlO1CzqXG12KnJzpZs6lv24uX2Rzi4Fmm0noJpNlnWRVryuO3yK18Ca04t/YHcO1e1Z0WDfjseqNzw==",
+      "sha512": "sha512-kz0PEW2lhqygehI/d6XsPCQzD7ff7gUJaVGPVETX611eadGsA3A877GdSlU0LRVMCTH/+P3o2iDTak+S08V2+A==",
       "path": "microsoft.netcore.platforms/1.1.0",
       "hashPath": "microsoft.netcore.platforms.1.1.0.nupkg.sha512"
     },
@@ -102,9 +104,16 @@
     "Xamarin.Forms.Maps/3.1.0.697729": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-X+qjn+UBlXFhP9XwdnEN1AFF+hFG58JS6DW3u6BPKq/87etFtGLsb8qHftucjMTJKNhwYqXx/v7W0ARvZSP3EA==",
+      "sha512": "sha512-WySTPEbjx31ytOvATUpu+5tXCA+X6CbMJ6yunCZqWXwD6oGgyzb91jIq9GT9sMO/+h+J3gIAvUlDHZVnpkd1ZQ==",
       "path": "xamarin.forms.maps/3.1.0.697729",
       "hashPath": "xamarin.forms.maps.3.1.0.697729.nupkg.sha512"
+    },
+    "Xamarin.GooglePlayServices/27.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-kkHVDyS38SpmFxPxzPsIaEmQtoRjJcDgZLtY+gpyxXevBbLzS9mvEy/h7ztLLWaLcdKSaXf6UzSnJS1KrOLJJg==",
+      "path": "xamarin.googleplayservices/27.0.0",
+      "hashPath": "xamarin.googleplayservices.27.0.0.nupkg.sha512"
     }
   }
 }

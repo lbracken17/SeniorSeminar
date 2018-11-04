@@ -18,7 +18,8 @@ namespace Forms
             var locator = CrossGeolocator.Current;
             //if (IsLocationAvailable())
               //  map.IsShowingUser = true;
-            map.IsShowingUser = true;
+            //map.IsShowingUser = true;
+
             map.MoveToRegion(MapSpan.FromCenterAndRadius(new Position(44.011, -73.18), Distance.FromMiles(1)));
         }
 
@@ -32,7 +33,7 @@ namespace Forms
 
         void OnRouteClick(object sender, EventArgs args)
         {
-            
+            map.IsShowingUser = true;
             String start = origin.Text.ToUpper();
             String end = destination.Text.ToUpper();
             end = Buildings(end);

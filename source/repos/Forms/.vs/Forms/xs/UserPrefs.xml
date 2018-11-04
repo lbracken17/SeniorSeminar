@@ -1,0 +1,22 @@
+﻿<Properties StartupConfiguration="{C8012840-2676-4BB1-B288-F219250D87E3}|Default">
+  <MonoDevelop.Ide.ItemProperties.Forms.Android PreferredExecutionTarget="Android.Android_Accelerated_Oreo" AndroidDesignerPreferredTheme="Theme.DeviceDefault.NoActionBar.Fullscreen" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Forms/Forms.Android/MapPage.cs">
+    <Files>
+      <File FileName="Forms/Forms.Android/MainActivity.cs" Line="15" Column="1" />
+      <File FileName="Forms/Forms/Forms.csproj" Line="1" Column="1" />
+      <File FileName="Forms/Forms/MainPage.xaml.cs" Line="22" Column="15" />
+      <File FileName="Forms/Forms/App.xaml" Line="8" Column="15" />
+      <File FileName="Forms/Forms/MainPage.xaml" Line="8" Column="6" />
+      <File FileName="Forms/Forms.Android/Properties/AndroidManifest.xml" Line="13" Column="16" />
+      <File FileName="../../../../../../.nuget/packages/xamarin.googleplayservices/27.0.0/readme.txt" Line="10" Column="45" />
+      <File FileName="Forms/Forms.Android/Resources/values/styles.xml" Line="1" Column="1" />
+      <File FileName="Forms/Forms.Android/MapPage.cs" Line="7" Column="10" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MultiItemStartupConfigurations />
+</Properties>

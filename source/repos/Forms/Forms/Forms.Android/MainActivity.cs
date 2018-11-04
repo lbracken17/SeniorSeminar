@@ -13,14 +13,19 @@ using Plugin.Permissions;
 using Android;
 using System.Threading.Tasks;
 
+
 namespace Forms.Droid
 {
     [Activity(Label = "Forms", Icon = "@mipmap/icon", Theme = "@style/MainTheme", MainLauncher = true, ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation)]
     public class MainActivity : global::Xamarin.Forms.Platform.Android.FormsAppCompatActivity
     {
-        
+        //MapPage test = new MapPage();
+
         protected async override void OnCreate(Bundle savedInstanceState)
         {
+            //MapPage test = new MapPage();
+            //test.IsShowingUser = true;
+
             await TryToGetPermissions();
             TabLayoutResource = Resource.Layout.Tabbar;
             ToolbarResource = Resource.Layout.Toolbar;

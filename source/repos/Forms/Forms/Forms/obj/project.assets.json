@@ -65,16 +65,18 @@
           "lib/netstandard2.0/Xamarin.Forms.Maps.Design.dll": {},
           "lib/netstandard2.0/Xamarin.Forms.Maps.dll": {}
         }
+      },
+      "Xamarin.GooglePlayServices/27.0.0": {
+        "type": "package"
       }
     }
   },
   "libraries": {
     "Microsoft.NETCore.Platforms/1.1.0": {
-      "sha512": "bLpT1f/SFlO1CzqXG12KnJzpZs6lv24uX2Rzi4Fmm0noJpNlnWRVryuO3yK18Ca04t/YHcO1e1Z0WDfjseqNzw==",
+      "sha512": "kz0PEW2lhqygehI/d6XsPCQzD7ff7gUJaVGPVETX611eadGsA3A877GdSlU0LRVMCTH/+P3o2iDTak+S08V2+A==",
       "type": "package",
       "path": "microsoft.netcore.platforms/1.1.0",
       "files": [
-        ".signature.p7s",
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
         "lib/netstandard1.0/_._",
@@ -385,7 +387,7 @@
       ]
     },
     "Xamarin.Forms.Maps/3.1.0.697729": {
-      "sha512": "X+qjn+UBlXFhP9XwdnEN1AFF+hFG58JS6DW3u6BPKq/87etFtGLsb8qHftucjMTJKNhwYqXx/v7W0ARvZSP3EA==",
+      "sha512": "WySTPEbjx31ytOvATUpu+5tXCA+X6CbMJ6yunCZqWXwD6oGgyzb91jIq9GT9sMO/+h+J3gIAvUlDHZVnpkd1ZQ==",
       "type": "package",
       "path": "xamarin.forms.maps/3.1.0.697729",
       "files": [
@@ -414,6 +416,17 @@
         "xamarin.forms.maps.3.1.0.697729.nupkg.sha512",
         "xamarin.forms.maps.nuspec"
       ]
+    },
+    "Xamarin.GooglePlayServices/27.0.0": {
+      "sha512": "kkHVDyS38SpmFxPxzPsIaEmQtoRjJcDgZLtY+gpyxXevBbLzS9mvEy/h7ztLLWaLcdKSaXf6UzSnJS1KrOLJJg==",
+      "type": "package",
+      "path": "xamarin.googleplayservices/27.0.0",
+      "files": [
+        ".signature.p7s",
+        "readme.txt",
+        "xamarin.googleplayservices.27.0.0.nupkg.sha512",
+        "xamarin.googleplayservices.nuspec"
+      ]
     }
   },
   "projectFileDependencyGroups": {
@@ -421,34 +434,33 @@
       "NETStandard.Library >= 2.0.3",
       "Xam.Plugin.Geolocator >= 4.5.0.6",
       "Xamarin.Forms >= 3.1.0.697729",
-      "Xamarin.Forms.Maps >= 3.1.0.697729"
+      "Xamarin.Forms.Maps >= 3.1.0.697729",
+      "Xamarin.GooglePlayServices >= 27.0.0"
     ]
   },
   "packageFolders": {
-    "C:\\Users\\William\\.nuget\\packages\\": {},
-    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
+    "/Users/leahbracken/.nuget/packages/": {},
+    "/usr/local/share/dotnet/sdk/NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\William\\source\\repos\\Forms\\Forms\\Forms\\Forms.csproj",
+      "projectUniqueName": "/Users/leahbracken/Documents/GitHub/SeniorSeminar/source/repos/Forms/Forms/Forms/Forms.csproj",
       "projectName": "Forms",
-      "projectPath": "C:\\Users\\William\\source\\repos\\Forms\\Forms\\Forms\\Forms.csproj",
-      "packagesPath": "C:\\Users\\William\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\William\\source\\repos\\Forms\\Forms\\Forms\\obj\\",
+      "projectPath": "/Users/leahbracken/Documents/GitHub/SeniorSeminar/source/repos/Forms/Forms/Forms/Forms.csproj",
+      "packagesPath": "/Users/leahbracken/.nuget/packages/",
+      "outputPath": "/Users/leahbracken/Documents/GitHub/SeniorSeminar/source/repos/Forms/Forms/Forms/obj",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
-        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        "/usr/local/share/dotnet/sdk/NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\William\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        "/Users/leahbracken/.config/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "netstandard2.0"
       ],
       "sources": {
-        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -465,23 +477,27 @@
     "frameworks": {
       "netstandard2.0": {
         "dependencies": {
-          "NETStandard.Library": {
-            "suppressParent": "All",
-            "target": "Package",
-            "version": "[2.0.3, )",
-            "autoReferenced": true
-          },
           "Xam.Plugin.Geolocator": {
             "target": "Package",
-            "version": "[4.5.0.6, )"
+            "version": "4.5.0.6"
           },
           "Xamarin.Forms": {
             "target": "Package",
-            "version": "[3.1.0.697729, )"
+            "version": "3.1.0.697729"
           },
           "Xamarin.Forms.Maps": {
             "target": "Package",
-            "version": "[3.1.0.697729, )"
+            "version": "3.1.0.697729"
+          },
+          "Xamarin.GooglePlayServices": {
+            "target": "Package",
+            "version": "27.0.0"
+          },
+          "NETStandard.Library": {
+            "suppressParent": "All",
+            "target": "Package",
+            "version": "2.0.3",
+            "autoReferenced": true
           }
         },
         "imports": [

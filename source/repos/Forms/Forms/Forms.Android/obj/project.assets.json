@@ -357,7 +357,7 @@
           "build/MonoAndroid81/Xamarin.Android.Support.Vector.Drawable.targets": {}
         }
       },
-      "Xamarin.Build.Download/0.4.2": {
+      "Xamarin.Build.Download/0.4.9": {
         "type": "package",
         "build": {
           "build/Xamarin.Build.Download.props": {},
@@ -392,13 +392,13 @@
           "build/netstandard2.0/Xamarin.Forms.targets": {}
         }
       },
-      "Xamarin.Forms.Maps/3.1.0.697729": {
+      "Xamarin.Forms.Maps/3.3.0.912540": {
         "type": "package",
         "dependencies": {
-          "Xamarin.Android.Support.v7.AppCompat": "25.4.0.2",
-          "Xamarin.Android.Support.v7.MediaRouter": "25.4.0.2",
-          "Xamarin.Forms": "3.1.0.697729",
-          "Xamarin.GooglePlayServices.Maps": "42.1021.1"
+          "Xamarin.Android.Support.v7.AppCompat": "27.0.2",
+          "Xamarin.Android.Support.v7.MediaRouter": "27.0.2",
+          "Xamarin.Forms": "3.3.0.912540",
+          "Xamarin.GooglePlayServices.Maps": "60.1142.1"
         },
         "compile": {
           "lib/MonoAndroid10/Xamarin.Forms.Maps.Android.dll": {},
@@ -409,67 +409,74 @@
           "lib/MonoAndroid10/Xamarin.Forms.Maps.dll": {}
         }
       },
-      "Xamarin.GooglePlayServices.Base/42.1021.1": {
+      "Xamarin.GooglePlayServices/27.0.0": {
+        "type": "package"
+      },
+      "Xamarin.GooglePlayServices.Base/60.1142.1": {
         "type": "package",
         "dependencies": {
-          "Xamarin.GooglePlayServices.Basement": "[42.1021.1]",
-          "Xamarin.GooglePlayServices.Tasks": "[42.1021.1]"
+          "Xamarin.GooglePlayServices.Basement": "[60.1142.1]",
+          "Xamarin.GooglePlayServices.Tasks": "[60.1142.1]"
         },
         "compile": {
-          "lib/MonoAndroid70/Xamarin.GooglePlayServices.Base.dll": {}
+          "lib/MonoAndroid80/Xamarin.GooglePlayServices.Base.dll": {}
         },
         "runtime": {
-          "lib/MonoAndroid70/Xamarin.GooglePlayServices.Base.dll": {}
+          "lib/MonoAndroid80/Xamarin.GooglePlayServices.Base.dll": {}
         },
         "build": {
-          "build/MonoAndroid70/Xamarin.GooglePlayServices.Base.targets": {}
+          "build/MonoAndroid80/Xamarin.GooglePlayServices.Base.targets": {}
         }
       },
-      "Xamarin.GooglePlayServices.Basement/42.1021.1": {
+      "Xamarin.GooglePlayServices.Basement/60.1142.1": {
         "type": "package",
         "dependencies": {
-          "Xamarin.Android.Support.v4": "25.1.0",
-          "Xamarin.Build.Download": "0.4.2"
+          "Xamarin.Android.Support.Compat": "26.0.2",
+          "Xamarin.Android.Support.Core.UI": "26.0.2",
+          "Xamarin.Android.Support.Core.Utils": "26.0.2",
+          "Xamarin.Android.Support.Fragment": "26.0.2",
+          "Xamarin.Android.Support.Media.Compat": "26.0.2",
+          "Xamarin.Build.Download": "0.4.9"
         },
         "compile": {
-          "lib/MonoAndroid70/Xamarin.GooglePlayServices.Basement.dll": {}
+          "lib/MonoAndroid80/Xamarin.GooglePlayServices.Basement.dll": {}
         },
         "runtime": {
-          "lib/MonoAndroid70/Xamarin.GooglePlayServices.Basement.dll": {}
+          "lib/MonoAndroid80/Xamarin.GooglePlayServices.Basement.dll": {}
         },
         "build": {
-          "build/MonoAndroid70/Xamarin.GooglePlayServices.Basement.targets": {}
+          "build/MonoAndroid80/Xamarin.GooglePlayServices.Basement.targets": {}
         }
       },
-      "Xamarin.GooglePlayServices.Maps/42.1021.1": {
+      "Xamarin.GooglePlayServices.Maps/60.1142.1": {
         "type": "package",
         "dependencies": {
-          "Xamarin.GooglePlayServices.Base": "[42.1021.1]",
-          "Xamarin.GooglePlayServices.Basement": "[42.1021.1]"
+          "Xamarin.GooglePlayServices.Base": "[60.1142.1]",
+          "Xamarin.GooglePlayServices.Basement": "[60.1142.1]"
         },
         "compile": {
-          "lib/MonoAndroid70/Xamarin.GooglePlayServices.Maps.dll": {}
+          "lib/MonoAndroid80/Xamarin.GooglePlayServices.Maps.dll": {}
         },
         "runtime": {
-          "lib/MonoAndroid70/Xamarin.GooglePlayServices.Maps.dll": {}
+          "lib/MonoAndroid80/Xamarin.GooglePlayServices.Maps.dll": {}
         },
         "build": {
-          "build/MonoAndroid70/Xamarin.GooglePlayServices.Maps.targets": {}
+          "build/MonoAndroid80/Xamarin.GooglePlayServices.Maps.targets": {}
         }
       },
-      "Xamarin.GooglePlayServices.Tasks/42.1021.1": {
+      "Xamarin.GooglePlayServices.Tasks/60.1142.1": {
         "type": "package",
         "dependencies": {
-          "Xamarin.GooglePlayServices.Basement": "[42.1021.1]"
+          "Xamarin.GooglePlayServices.Basement": "[60.1142.1]"
         },
         "compile": {
-          "lib/MonoAndroid70/Xamarin.GooglePlayServices.Tasks.dll": {}
+          "lib/MonoAndroid80/Xamarin.GooglePlayServices.Tasks.dll": {}
         },
         "runtime": {
-          "lib/MonoAndroid70/Xamarin.GooglePlayServices.Tasks.dll": {}
+          "lib/MonoAndroid80/Xamarin.GooglePlayServices.Tasks.dll": {}
         },
         "build": {
-          "build/MonoAndroid70/Xamarin.GooglePlayServices.Tasks.targets": {}
+          "build/MonoAndroid80/Xamarin.GooglePlayServices.Tasks.targets": {}
         }
       },
       "Forms/1.0.0": {
@@ -478,7 +485,8 @@
         "dependencies": {
           "Xam.Plugin.Geolocator": "4.5.0.6",
           "Xamarin.Forms": "3.1.0.697729",
-          "Xamarin.Forms.Maps": "3.1.0.697729"
+          "Xamarin.Forms.Maps": "3.1.0.697729",
+          "Xamarin.GooglePlayServices": "27.0.0"
         },
         "compile": {
           "bin/placeholder/Forms.dll": {}
@@ -549,7 +557,7 @@
       ]
     },
     "Xamarin.Android.Arch.Core.Common/1.0.0.1": {
-      "sha512": "GIz8xfnOLJH5yWC0ocIR80hJlYQ2Lz2HQKjW2/vi0rxYXR6nF/D4aOFlTx1PIA6A9FLgFRrajSJyCfx460qycw==",
+      "sha512": "UiWrWginObSSfmhKMTnRthhAWuH9yPhqP5ZCCCI9tTWl+XS/+sqcDjd84vP+dr1ve2h/AVZo9NgCbE1Xgktw2g==",
       "type": "package",
       "path": "xamarin.android.arch.core.common/1.0.0.1",
       "files": [
@@ -562,7 +570,7 @@
       ]
     },
     "Xamarin.Android.Arch.Lifecycle.Common/1.0.3.1": {
-      "sha512": "MjXUijH4kXY3lrx/tmX+hYnV6vN83tR3U4tsw39vrCiev2HGO8Xydn/KiI1qNoI/Te1P9kMnlBBJS4ItQYMbgg==",
+      "sha512": "y+qfAAGWCYAqCkJ/JpFjjoBMC6PwYB1Ji3Dfu7PYWCwab412RrqbMVz3BdMEvhfInCHMqDGG0IyYgd148xdDVw==",
       "type": "package",
       "path": "xamarin.android.arch.lifecycle.common/1.0.3.1",
       "files": [
@@ -575,7 +583,7 @@
       ]
     },
     "Xamarin.Android.Arch.Lifecycle.Runtime/1.0.3.1": {
-      "sha512": "GjwqNGLklKFAB5VVN3JR1Dx2ZcCY9W2VLXI1PxoASm5VYCgtaUmwgqogD/MjEHLHMP+ePIidNwrn9H9s62jIow==",
+      "sha512": "+jIPk2XOQ5FRGHERH+nZDYSiuUoopsyNVby1rxtwrgEaOz28JccHdK1IVdGL169+5SFGyO7JpbKhZUZTG2Zdeg==",
       "type": "package",
       "path": "xamarin.android.arch.lifecycle.runtime/1.0.3.1",
       "files": [
@@ -589,7 +597,7 @@
       ]
     },
     "Xamarin.Android.Support.Animated.Vector.Drawable/27.0.2.1": {
-      "sha512": "b4/jnc8DVz7cc33fdWjd7HpHxAGTHgImh7JVQZH4jjPFyCbH/GZ7me9C1/Ka8nusiyUSl7PUbCbpUQxffqJlAw==",
+      "sha512": "xaz2MjrV45FTveaCAzIepz/g/YIVBg3FQJJKLzg3ODtw7yu2CbbWyp3mvKtdyXpeE7rWwFPccHQH/2gD3aj3OQ==",
       "type": "package",
       "path": "xamarin.android.support.animated.vector.drawable/27.0.2.1",
       "files": [
@@ -603,7 +611,7 @@
       ]
     },
     "Xamarin.Android.Support.Annotations/27.0.2.1": {
-      "sha512": "TIlkrvatmC5uyXno+9Nlk+MKW0qDpsb3MQwLwI95sVzJ3el5s8xhgUkju6g1t2DA9fA04oxhe9+ld93W7uEjdA==",
+      "sha512": "YBMPR/+FWss9S84cKtiPtXrb6eNScy5sKzhUFVtwf+DaH9L05PmzarerZkmMjB4cr87+/pzIxEEJlJWhRf9fQg==",
       "type": "package",
       "path": "xamarin.android.support.annotations/27.0.2.1",
       "files": [
@@ -616,7 +624,7 @@
       ]
     },
     "Xamarin.Android.Support.Compat/27.0.2.1": {
-      "sha512": "JorNE3m7BIFM7bwmALSutllnttH3kDe8lwWQPT+7aQ8dbhuITN+FZ4BGzR0bbi+wStgP9d5+VhG6qyQapSpwMQ==",
+      "sha512": "TQQhsUxvAwZTkFdTTD97JcfrJx5xe/WK+tAI1CZyqzMEGpX/gjqcfjDO2SzBne+B0x5u9xC2VBYzvJN9OV3Mqg==",
       "type": "package",
       "path": "xamarin.android.support.compat/27.0.2.1",
       "files": [
@@ -629,7 +637,7 @@
       ]
     },
     "Xamarin.Android.Support.Core.UI/27.0.2.1": {
-      "sha512": "s/EUHNGPv66UiOAxWb4tgpun+ZtK20zIF3EJ+mNcvu/x2tN6m3TIQpLuctEZCVqR1oItROC5P176arC6PidPeA==",
+      "sha512": "HfpQEghgxnT+VgJa2LDFUraDMj+sHtq3oIkO0IWNc/Ii/A2Kl9jpmidoVzfbLk7++KWsNsRBTOb3dNXYZePoXA==",
       "type": "package",
       "path": "xamarin.android.support.core.ui/27.0.2.1",
       "files": [
@@ -643,7 +651,7 @@
       ]
     },
     "Xamarin.Android.Support.Core.Utils/27.0.2.1": {
-      "sha512": "AQwpdlBMVAzrJgNtTis6DkimVjFQTkK731oBTVq07cI5b8w01zxADYSGEhNODdekGCLUCnLFMDQTnxUyOWaRjw==",
+      "sha512": "2dtlWrVtDzuBNGy0JZ6bnZp92rlOWjts7qnG1cniSSWQ5AlPYbfq1qIDaWQTrd50OGoXHh6Db1oBk6PVgWvOHg==",
       "type": "package",
       "path": "xamarin.android.support.core.utils/27.0.2.1",
       "files": [
@@ -656,7 +664,7 @@
       ]
     },
     "Xamarin.Android.Support.Design/27.0.2.1": {
-      "sha512": "9IVH+F4isJAsxQ0PjbYaolubpo/4XCAFYCpLHdUlcTQl+YWAbf0oeh0nhZMU/GnXcX7xWnBA6r6FE98p6wopfw==",
+      "sha512": "Lc7sN6n4XQexZEnRm1Q+HGA+5xNPttM8vw/BNLsoKZy6Ao0uEzUbk+HDdYQwH9UAEJ01MBe0hp4sd0Uy7y/m4A==",
       "type": "package",
       "path": "xamarin.android.support.design/27.0.2.1",
       "files": [
@@ -670,7 +678,7 @@
       ]
     },
     "Xamarin.Android.Support.Fragment/27.0.2.1": {
-      "sha512": "spNksIV4hpziYc2gerlw5iesdSm0NdgilLxAJLbwa9y1Y26kDRBCoMjzpKfptF1vdN6/ZYjS81DNsqG1qPloLA==",
+      "sha512": "W217/JM+t+H4+bKc+LBIhblnLW4sZc8HABak9eTv5yJl3FlTfq0cNt7aMNOKxUxy2/wt0Uo8YNSZK6YVHYsVhg==",
       "type": "package",
       "path": "xamarin.android.support.fragment/27.0.2.1",
       "files": [
@@ -683,7 +691,7 @@
       ]
     },
     "Xamarin.Android.Support.Media.Compat/27.0.2.1": {
-      "sha512": "IoUa9wypzr9mswLbH0ZOIoylB3R40EPrGu08xEA4h72qVDnkeXwuQ0pPe0v7tPIUKBH3Dh87lHPRw88YOaAa3Q==",
+      "sha512": "BbVt10cN+Adk6mlPT4MYPR7fB46laGqEV2//1AMDkLYk5PKbHNcmRXJQUnYPWQRjgBJ0k6QQq5fCHqxP3W9mbQ==",
       "type": "package",
       "path": "xamarin.android.support.media.compat/27.0.2.1",
       "files": [
@@ -697,7 +705,7 @@
       ]
     },
     "Xamarin.Android.Support.Transition/27.0.2.1": {
-      "sha512": "HoU++jsvcqS2vLf+p4XVOnUSf2Mfgy3MdMRs8uSm4a0fRbRYHZBUcODVpcIpS3lCnXX1fV5oPzG1l06/hJ3HYw==",
+      "sha512": "PpHN79/lhUw+F2xiUkoPsDuglZGm8p1HfjYnOA1yJV/4CBkE8i6Ia6PZTqEWsy9bOfkoxe+shScAJXsKy4V89w==",
       "type": "package",
       "path": "xamarin.android.support.transition/27.0.2.1",
       "files": [
@@ -711,7 +719,7 @@
       ]
     },
     "Xamarin.Android.Support.v4/27.0.2.1": {
-      "sha512": "/tq1agjFA4D2NSSI6qDxSEhXaKq3YUn2tJhhURZneMMCUnFEiE0hafJRRqiYPB55AyBKStu9i+wa5P8GYqAhnw==",
+      "sha512": "cK4ixeeIPSF1xl371Rb2CiEMrSCXa5kXaehsSkeAFGtgpAQvbt6FbEKk501fzVi/HzNkETzajEtsQ9PMttZi9A==",
       "type": "package",
       "path": "xamarin.android.support.v4/27.0.2.1",
       "files": [
@@ -724,7 +732,7 @@
       ]
     },
     "Xamarin.Android.Support.v7.AppCompat/27.0.2.1": {
-      "sha512": "Gt7W7/ttK0LaDaKVL0hkSByYK9j/oOzDBGASE0WG4HREvDQLlfXFOq4MPhxs8StLiTIU8GwGOXnDbUNRWTiH+A==",
+      "sha512": "MumW84Eb14Lt+nXFWzDaDEn2y4MtDJHGDZcSAtXtLwt8QbG5wU0HNX1DGM1qNtanFltIwoyiDNEuqGxYPthhyw==",
       "type": "package",
       "path": "xamarin.android.support.v7.appcompat/27.0.2.1",
       "files": [
@@ -737,7 +745,7 @@
       ]
     },
     "Xamarin.Android.Support.v7.CardView/27.0.2.1": {
-      "sha512": "+UkAwNO7mTgVZKLqS6DyFuhgvpJHAd1I+GIKbqdO0W0VQlxxYsw6jjxalUratXDh9tge1q1mWO5J+smdq/i92Q==",
+      "sha512": "nxNiwRl+ALOoXD3tT+jo3yoTr/oTY6aPKbJnAPpA/qqB/Uq+HqbQeWwwMXjLiTCytTpOOpwmIRJQnuq1uu4xIQ==",
       "type": "package",
       "path": "xamarin.android.support.v7.cardview/27.0.2.1",
       "files": [
@@ -750,7 +758,7 @@
       ]
     },
     "Xamarin.Android.Support.v7.MediaRouter/27.0.2.1": {
-      "sha512": "54qik0sLuh/Tafs2T3tnG9ifFgXJacEgplGvOVMGXtEQgF5PBTHNCyfL9Zt4FsN46YVIqQ8GKYdKKx2PYCBQ8A==",
+      "sha512": "2k9ocolcyaxqzLInOEbzW+VjgJL7ruv9WFaKSj4OMnChw8ih53skPyun2q/9lnQV/c+/qNq8cvYipPtYr9bFCg==",
       "type": "package",
       "path": "xamarin.android.support.v7.mediarouter/27.0.2.1",
       "files": [
@@ -763,7 +771,7 @@
       ]
     },
     "Xamarin.Android.Support.v7.Palette/27.0.2.1": {
-      "sha512": "LIJSdnUTSBY3P6gNZhwywQj2ElloOcRNHIbh1svH+Qs1Zdqd8/ouub8nZZT5yJSzzOoIjtURqcYzNsU0UzUeCw==",
+      "sha512": "vlcBuVGg3uQL/RBqUEXAqjUNCPt3ougteZWSASUKqDg8BobI8dVrf7wEpOexKLW8eqUblAPjnfJMCF2F3Gcj3g==",
       "type": "package",
       "path": "xamarin.android.support.v7.palette/27.0.2.1",
       "files": [
@@ -776,7 +784,7 @@
       ]
     },
     "Xamarin.Android.Support.v7.RecyclerView/27.0.2.1": {
-      "sha512": "hQ/QOBgFuutFS0TG0zzRrWu679cOFsVChkKoWsaIdzRgTSCZKgBJb0hX96PLxdAJZFG5B0GvZ0YpTexYRxzYdw==",
+      "sha512": "ze4MYJlicTnIUGP37fVcrhgPfF47dG7TcRv1jkExBBqHoMk68kcrpg0cCNvCjIAhGdMtgEv3i+CiUC5QWLYQwA==",
       "type": "package",
       "path": "xamarin.android.support.v7.recyclerview/27.0.2.1",
       "files": [
@@ -790,7 +798,7 @@
       ]
     },
     "Xamarin.Android.Support.Vector.Drawable/27.0.2.1": {
-      "sha512": "9Y/L/m7yRcL5PhCMcSkucqZfiCGaK4XFGEx+0bZ1xvl2oJfzut29M1gqt9iRsuFK+6ENRVQAc0puSD4rC32AQA==",
+      "sha512": "l7cInRhTODLzM6CLCXzqGiD+zstS7lYOWJxCZP5aIhsdBjSrv6oCqLPA50jK2ceaOu/6aG8/9NX18DHJy4mHFg==",
       "type": "package",
       "path": "xamarin.android.support.vector.drawable/27.0.2.1",
       "files": [
@@ -803,11 +811,12 @@
         "xamarin.android.support.vector.drawable.nuspec"
       ]
     },
-    "Xamarin.Build.Download/0.4.2": {
-      "sha512": "ubHPHMJ7RrfrsG4kHEy925XDMb+P41WOI8Bxkm3RmecGjj1Ew/u6rpWAZSgLv7FxZbmfvl5xAKUJ4onCycvw5g==",
+    "Xamarin.Build.Download/0.4.9": {
+      "sha512": "CxKoLSKdiUUe0UslTcb2ZP7QsC0lf7hwwpGckkHuczRMuD/MjmcXyJGVy4oWa5qbLSM4AW9D9ZvPFue39XVBAg==",
       "type": "package",
-      "path": "xamarin.build.download/0.4.2",
+      "path": "xamarin.build.download/0.4.9",
       "files": [
+        ".signature.p7s",
         "THIRD-PARTY-NOTICES.txt",
         "build/Mono.Cecil.dll",
         "build/Newtonsoft.Json.dll",
@@ -815,7 +824,7 @@
         "build/Xamarin.Build.Download.dll",
         "build/Xamarin.Build.Download.props",
         "build/Xamarin.Build.Download.targets",
-        "xamarin.build.download.0.4.2.nupkg.sha512",
+        "xamarin.build.download.0.4.9.nupkg.sha512",
         "xamarin.build.download.nuspec"
       ]
     },
@@ -968,10 +977,10 @@
         "xamarin.forms.nuspec"
       ]
     },
-    "Xamarin.Forms.Maps/3.1.0.697729": {
-      "sha512": "X+qjn+UBlXFhP9XwdnEN1AFF+hFG58JS6DW3u6BPKq/87etFtGLsb8qHftucjMTJKNhwYqXx/v7W0ARvZSP3EA==",
+    "Xamarin.Forms.Maps/3.3.0.912540": {
+      "sha512": "UgwyNjX1R7Kw0ZRCtYCck9BQ5/thU1mmj65ydh5c+WNF106rVSg7bKUqYfErF+G4MezIDnfx24jf7lMerPJ8HQ==",
       "type": "package",
-      "path": "xamarin.forms.maps/3.1.0.697729",
+      "path": "xamarin.forms.maps/3.3.0.912540",
       "files": [
         ".signature.p7s",
         "lib/MonoAndroid10/Xamarin.Forms.Maps.Android.dll",
@@ -995,52 +1004,67 @@
         "lib/uap10.0/Xamarin.Forms.Maps.UWP.dll",
         "lib/uap10.0/Xamarin.Forms.Maps.UWP.pri",
         "lib/uap10.0/Xamarin.Forms.Maps.dll",
-        "xamarin.forms.maps.3.1.0.697729.nupkg.sha512",
+        "xamarin.forms.maps.3.3.0.912540.nupkg.sha512",
         "xamarin.forms.maps.nuspec"
       ]
     },
-    "Xamarin.GooglePlayServices.Base/42.1021.1": {
-      "sha512": "BtzfOXEkHdaQ8NGc8TpAYmjGAf27zWyxMS9dz+YGU2S2oR09KPm/dQ7PzHNlOT90CQLI4JjzKTxfQ7IB5DBsJA==",
+    "Xamarin.GooglePlayServices/27.0.0": {
+      "sha512": "kkHVDyS38SpmFxPxzPsIaEmQtoRjJcDgZLtY+gpyxXevBbLzS9mvEy/h7ztLLWaLcdKSaXf6UzSnJS1KrOLJJg==",
       "type": "package",
-      "path": "xamarin.googleplayservices.base/42.1021.1",
+      "path": "xamarin.googleplayservices/27.0.0",
       "files": [
-        "build/MonoAndroid70/Xamarin.GooglePlayServices.Base.targets",
-        "lib/MonoAndroid70/Xamarin.GooglePlayServices.Base.dll",
-        "xamarin.googleplayservices.base.42.1021.1.nupkg.sha512",
+        ".signature.p7s",
+        "readme.txt",
+        "xamarin.googleplayservices.27.0.0.nupkg.sha512",
+        "xamarin.googleplayservices.nuspec"
+      ]
+    },
+    "Xamarin.GooglePlayServices.Base/60.1142.1": {
+      "sha512": "mEyHPIGA6fqE9AmO8zr3+izgt7rZDuB3OHGrDmU/Mg6cP0z205wXK5z5j4EfI0XZ0kgU0Z33IKbVDgndfFwZeA==",
+      "type": "package",
+      "path": "xamarin.googleplayservices.base/60.1142.1",
+      "files": [
+        ".signature.p7s",
+        "build/MonoAndroid80/Xamarin.GooglePlayServices.Base.targets",
+        "lib/MonoAndroid80/Xamarin.GooglePlayServices.Base.dll",
+        "xamarin.googleplayservices.base.60.1142.1.nupkg.sha512",
         "xamarin.googleplayservices.base.nuspec"
       ]
     },
-    "Xamarin.GooglePlayServices.Basement/42.1021.1": {
-      "sha512": "jtKUaz3wGQevuewY9i7FYRvfSIZhBHymTZwTx1agr6G2hg6Xx06LkRYICULHTRjUHa+Ee/J44ejf3+hMd2WBeg==",
+    "Xamarin.GooglePlayServices.Basement/60.1142.1": {
+      "sha512": "85zCK7rGY/gjznoQHl2J8Asody+vV4gp88IGZJ/FfnOZYo2KMZVdCb2Iw7q7QwsQCrSYiakDYeeugVB7BY6q6w==",
       "type": "package",
-      "path": "xamarin.googleplayservices.basement/42.1021.1",
+      "path": "xamarin.googleplayservices.basement/60.1142.1",
       "files": [
-        "build/MonoAndroid70/Xamarin.GooglePlayServices.Basement.targets",
-        "build/MonoAndroid70/Xamarin.GooglePlayServices.Tasks.dll",
-        "lib/MonoAndroid70/Xamarin.GooglePlayServices.Basement.dll",
-        "xamarin.googleplayservices.basement.42.1021.1.nupkg.sha512",
+        ".signature.p7s",
+        "build/MonoAndroid80/Xamarin.GooglePlayServices.Basement.targets",
+        "build/MonoAndroid80/Xamarin.GooglePlayServices.Tasks.dll",
+        "lib/MonoAndroid80/Xamarin.GooglePlayServices.Basement.dll",
+        "xamarin.googleplayservices.basement.60.1142.1.nupkg.sha512",
         "xamarin.googleplayservices.basement.nuspec"
       ]
     },
-    "Xamarin.GooglePlayServices.Maps/42.1021.1": {
-      "sha512": "h/t3VRjDzSUqFw1IfZzeut18+tuzAsHBXtPhrnxB2Bt1izxC7JUQOAxeDR8Y49mVH4qQZwOMh/aushGeaSdmXQ==",
+    "Xamarin.GooglePlayServices.Maps/60.1142.1": {
+      "sha512": "1c0X3Ro/tfDu3/G8Y3JG4qgPSqFFvKebAZYNEChd0L2Lsk0Wa8LipSpzK5h7+/0Qvxpbyx53+76DOdSRecPodA==",
       "type": "package",
-      "path": "xamarin.googleplayservices.maps/42.1021.1",
+      "path": "xamarin.googleplayservices.maps/60.1142.1",
       "files": [
-        "build/MonoAndroid70/Xamarin.GooglePlayServices.Maps.targets",
-        "lib/MonoAndroid70/Xamarin.GooglePlayServices.Maps.dll",
-        "xamarin.googleplayservices.maps.42.1021.1.nupkg.sha512",
+        ".signature.p7s",
+        "build/MonoAndroid80/Xamarin.GooglePlayServices.Maps.targets",
+        "lib/MonoAndroid80/Xamarin.GooglePlayServices.Maps.dll",
+        "xamarin.googleplayservices.maps.60.1142.1.nupkg.sha512",
         "xamarin.googleplayservices.maps.nuspec"
       ]
     },
-    "Xamarin.GooglePlayServices.Tasks/42.1021.1": {
-      "sha512": "en5d21P3pIGGWtmqcygJsX74mNX8VZqOkj/ajwrwyIK8EOsbWLI9Cw0+wdE3OYGEwk+74ckX1icLT/zTspf8kg==",
+    "Xamarin.GooglePlayServices.Tasks/60.1142.1": {
+      "sha512": "300vD5hWHqAQ5SXwwDlyDkeK1O73fqIQMdz9i+8Y7h8yB1+3DitD9SuLBSh+6aJhldYOGo1lBsdlsXBc12t+vw==",
       "type": "package",
-      "path": "xamarin.googleplayservices.tasks/42.1021.1",
+      "path": "xamarin.googleplayservices.tasks/60.1142.1",
       "files": [
-        "build/MonoAndroid70/Xamarin.GooglePlayServices.Tasks.targets",
-        "lib/MonoAndroid70/Xamarin.GooglePlayServices.Tasks.dll",
-        "xamarin.googleplayservices.tasks.42.1021.1.nupkg.sha512",
+        ".signature.p7s",
+        "build/MonoAndroid80/Xamarin.GooglePlayServices.Tasks.targets",
+        "lib/MonoAndroid80/Xamarin.GooglePlayServices.Tasks.dll",
+        "xamarin.googleplayservices.tasks.60.1142.1.nupkg.sha512",
         "xamarin.googleplayservices.tasks.nuspec"
       ]
     },
@@ -1060,38 +1084,35 @@
       "Xamarin.Android.Support.v7.CardView >= 27.0.2.1",
       "Xamarin.Android.Support.v7.MediaRouter >= 27.0.2.1",
       "Xamarin.Forms >= 3.1.0.697729",
-      "Xamarin.Forms.Maps >= 3.1.0.697729"
+      "Xamarin.Forms.Maps >= 3.3.0.912540"
     ]
   },
   "packageFolders": {
-    "C:\\Users\\William\\.nuget\\packages\\": {}
+    "/Users/leahbracken/.nuget/packages/": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\William\\source\\repos\\Forms\\Forms\\Forms.Android\\Forms.Android.csproj",
+      "projectUniqueName": "/Users/leahbracken/Documents/GitHub/SeniorSeminar/source/repos/Forms/Forms/Forms.Android/Forms.Android.csproj",
       "projectName": "Forms.Android",
-      "projectPath": "C:\\Users\\William\\source\\repos\\Forms\\Forms\\Forms.Android\\Forms.Android.csproj",
-      "packagesPath": "C:\\Users\\William\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\William\\source\\repos\\Forms\\Forms\\Forms.Android\\obj\\",
+      "projectPath": "/Users/leahbracken/Documents/GitHub/SeniorSeminar/source/repos/Forms/Forms/Forms.Android/Forms.Android.csproj",
+      "packagesPath": "/Users/leahbracken/.nuget/packages/",
+      "outputPath": "/Users/leahbracken/Documents/GitHub/SeniorSeminar/source/repos/Forms/Forms/Forms.Android/obj",
       "projectStyle": "PackageReference",
-      "skipContentFileWrite": true,
       "configFilePaths": [
-        "C:\\Users\\William\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        "/Users/leahbracken/.config/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "monoandroid81"
       ],
       "sources": {
-        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "monoandroid81": {
           "projectReferences": {
-            "C:\\Users\\William\\source\\repos\\Forms\\Forms\\Forms\\Forms.csproj": {
-              "projectPath": "C:\\Users\\William\\source\\repos\\Forms\\Forms\\Forms\\Forms.csproj"
+            "/Users/leahbracken/Documents/GitHub/SeniorSeminar/source/repos/Forms/Forms/Forms/Forms.csproj": {
+              "projectPath": "/Users/leahbracken/Documents/GitHub/SeniorSeminar/source/repos/Forms/Forms/Forms/Forms.csproj"
             }
           }
         }
@@ -1102,38 +1123,50 @@
         "dependencies": {
           "Plugin.CurrentActivity": {
             "target": "Package",
-            "version": "[2.1.0.4, )"
-          },
-          "Xamarin.Android.Support.Design": {
-            "target": "Package",
-            "version": "[27.0.2.1, )"
-          },
-          "Xamarin.Android.Support.v4": {
-            "target": "Package",
-            "version": "[27.0.2.1, )"
-          },
-          "Xamarin.Android.Support.v7.AppCompat": {
-            "target": "Package",
-            "version": "[27.0.2.1, )"
-          },
-          "Xamarin.Android.Support.v7.CardView": {
-            "target": "Package",
-            "version": "[27.0.2.1, )"
-          },
-          "Xamarin.Android.Support.v7.MediaRouter": {
-            "target": "Package",
-            "version": "[27.0.2.1, )"
+            "version": "2.1.0.4"
           },
           "Xamarin.Forms": {
             "target": "Package",
-            "version": "[3.1.0.697729, )"
+            "version": "3.1.0.697729"
+          },
+          "Xamarin.Android.Support.Design": {
+            "target": "Package",
+            "version": "27.0.2.1"
+          },
+          "Xamarin.Android.Support.v7.AppCompat": {
+            "target": "Package",
+            "version": "27.0.2.1"
+          },
+          "Xamarin.Android.Support.v4": {
+            "target": "Package",
+            "version": "27.0.2.1"
+          },
+          "Xamarin.Android.Support.v7.CardView": {
+            "target": "Package",
+            "version": "27.0.2.1"
+          },
+          "Xamarin.Android.Support.v7.MediaRouter": {
+            "target": "Package",
+            "version": "27.0.2.1"
           },
           "Xamarin.Forms.Maps": {
             "target": "Package",
-            "version": "[3.1.0.697729, )"
+            "version": "[3.3.0.912540, )"
           }
         }
       }
     }
-  }
+  },
+  "logs": [
+    {
+      "code": "NU1605",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Detected package downgrade: Xamarin.Forms from 3.3.0.912540 to 3.1.0.697729. Reference the package directly from the project to select a different version. \n Forms.Android (>= 1.0.0) -> Xamarin.Forms.Maps (>= 3.3.0.912540) -> Xamarin.Forms (>= 3.3.0.912540) \n Forms.Android (>= 1.0.0) -> Xamarin.Forms (>= 3.1.0.697729)",
+      "libraryId": "Xamarin.Forms",
+      "targetGraphs": [
+        "MonoAndroid,Version=v8.1"
+      ]
+    }
+  ]
 }
