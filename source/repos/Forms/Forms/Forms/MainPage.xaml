@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8" ?>
+<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:local="clr-namespace:Forms"
@@ -14,7 +14,6 @@
         <Button x:Name="routeButton" Text="Route" Clicked="OnRouteClick" />
         <Label x:Name="route" Text="" />
         <maps:Map x:Name="map" MapType="Street" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand"   />
-
             <!--<Label Text="You have an API key!" 
            HorizontalOptions="Center"
            VerticalOptions="CenterAndExpand" />-->

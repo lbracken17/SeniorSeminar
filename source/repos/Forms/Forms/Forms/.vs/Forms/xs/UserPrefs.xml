@@ -1,9 +1,10 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workbench ActiveDocument="MainPage.xaml">
+  <MonoDevelop.Ide.Workbench ActiveDocument="MainPage.xaml.cs">
     <Files>
-      <File FileName="App.xaml" Line="6" Column="5" />
-      <File FileName="MainPage.xaml" Line="10" Column="11" />
+      <File FileName="App.xaml" Line="8" Column="15" />
+      <File FileName="MainPage.xaml" Line="24" Column="1" />
       <File FileName="../Forms.Android/Properties/AndroidManifest.xml" Line="14" Column="12" />
+      <File FileName="MainPage.xaml.cs" Line="191" Column="2" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />

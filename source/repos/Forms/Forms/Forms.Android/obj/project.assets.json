@@ -409,6 +409,9 @@
           "lib/MonoAndroid10/Xamarin.Forms.Maps.dll": {}
         }
       },
+      "Xamarin.GooglePlayServices/27.0.0": {
+        "type": "package"
+      },
       "Xamarin.GooglePlayServices.Base/42.1021.1": {
         "type": "package",
         "dependencies": {
@@ -470,6 +473,22 @@
         },
         "build": {
           "build/MonoAndroid70/Xamarin.GooglePlayServices.Tasks.targets": {}
+        }
+      },
+      "Forms/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.0",
+        "dependencies": {
+          "Xam.Plugin.Geolocator": "4.5.0.6",
+          "Xamarin.Forms": "3.1.0.697729",
+          "Xamarin.Forms.Maps": "3.1.0.697729",
+          "Xamarin.GooglePlayServices": "27.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Forms.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Forms.dll": {}
         }
       }
     }
@@ -987,6 +1006,17 @@
         "xamarin.forms.maps.nuspec"
       ]
     },
+    "Xamarin.GooglePlayServices/27.0.0": {
+      "sha512": "kkHVDyS38SpmFxPxzPsIaEmQtoRjJcDgZLtY+gpyxXevBbLzS9mvEy/h7ztLLWaLcdKSaXf6UzSnJS1KrOLJJg==",
+      "type": "package",
+      "path": "xamarin.googleplayservices/27.0.0",
+      "files": [
+        ".signature.p7s",
+        "readme.txt",
+        "xamarin.googleplayservices.27.0.0.nupkg.sha512",
+        "xamarin.googleplayservices.nuspec"
+      ]
+    },
     "Xamarin.GooglePlayServices.Base/42.1021.1": {
       "sha512": "hT+srItg5VaMSsBfjhkO9AERkxdVS50x2AsQVIIn0CzTVndVs4pioD8WnOkWZeDfp/Ku+Cu8TzuqLmjv+OkNnw==",
       "type": "package",
@@ -1035,10 +1065,16 @@
         "xamarin.googleplayservices.tasks.42.1021.1.nupkg.sha512",
         "xamarin.googleplayservices.tasks.nuspec"
       ]
+    },
+    "Forms/1.0.0": {
+      "type": "project",
+      "path": "../Forms/Forms.csproj",
+      "msbuildProject": "../Forms/Forms.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "MonoAndroid,Version=v8.1": [
+      "Forms >= 1.0.0",
       "Plugin.CurrentActivity >= 2.1.0.4",
       "Xam.Plugin.Geolocator >= 4.5.0.6",
       "Xamarin.Android.Support.Design >= 27.0.2.1",
@@ -1073,7 +1109,11 @@
       },
       "frameworks": {
         "monoandroid81": {
-          "projectReferences": {}
+          "projectReferences": {
+            "/Users/leahbracken/Documents/GitHub/SeniorSeminar/source/repos/Forms/Forms/Forms/Forms.csproj": {
+              "projectPath": "/Users/leahbracken/Documents/GitHub/SeniorSeminar/source/repos/Forms/Forms/Forms/Forms.csproj"
+            }
+          }
         }
       }
     },

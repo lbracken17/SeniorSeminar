@@ -17,9 +17,38 @@ namespace Forms
             InitializeComponent();
             var locator = CrossGeolocator.Current;
             //if (IsLocationAvailable())
-              //  map.IsShowingUser = true;
+            //  map.IsShowingUser = true;
             //map.IsShowingUser = true;
             map.MoveToRegion(MapSpan.FromCenterAndRadius(new Position(44.011, -73.18), Distance.FromMiles(1)));
+        }
+
+        void WebViewDemoPage(){
+
+            Label header = new Label
+            {
+                Text = "WebView",
+                FontSize = Device.GetNamedSize(NamedSize.Large, typeof(Label)),
+                HorizontalOptions = LayoutOptions.Center
+            };
+
+            WebView webView = new WebView
+            {
+                Source = new UrlWebViewSource
+                {
+                    Url = "http://blog.xamarin.com/",
+                },
+                VerticalOptions = LayoutOptions.FillAndExpand
+            };
+            
+            // Build the page.
+            this.Content = new StackLayout
+            {
+                Children =
+                {
+                    header,
+                    webView
+                }
+            };
         }
 
         public bool IsLocationAvailable()
@@ -32,7 +61,7 @@ namespace Forms
 
         void OnRouteClick(object sender, EventArgs args)
         {
-            
+
             String start = origin.Text.ToUpper();
             String end = destination.Text.ToUpper();
             end = Buildings(end);
@@ -46,7 +75,7 @@ namespace Forms
                 route.Text = String.Format("Routing from {0} to {1}.", start, end);
         }
 
-        String Buildings (String buildingCode)
+        String Buildings(String buildingCode)
         {
             if (buildingCode == "MBH")
                 return "BiHall";
