@@ -1,0 +1,115 @@
+<html>
+<head>
+    <title>webViewSample</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
+          integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
+          crossorigin="" />
+    <script src="https://unpkg.com/leaflet@1.3.4/dist/leaflet.js"
+            integrity="sha512-nMMmRyTVoLYqjP9hrbed9S+FzjZHW5gY1TWCHA5ckwXZBadntCNs8kEqAWdrb9O7rxbCaA4lKTIWjDXZxflOcA=="
+            crossorigin=""></script>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+</head>
+<body>
+	<script>
+	var codes = {
+			"MBH": ["BiHall", 44.013613, -73.181267],
+			"CHT": ["Chateau", 44.012532, -73.177956],
+			"ADK": ["Adirondack", 44.010270, -73.180055],
+             "ADK CLT": ["Adirondack Coltrane Lounge", 44.010693, -73.180226],
+             "ATA": ["Atwater A", 44.013476, -73.178599],
+             "ATD": ["Atwater Dining- Seminar Room", 44.013271, -73.177286],
+             "AXN": ["Axinn", 44.008015, -73.176100],
+             "AXT": ["Twilight", 44.010899, -73.172218],
+             "AXT AUD": ["Twilight Auditorium", 44.010899, -73.172218],
+             "CHL": ["Chellis", 44.009364, -73.180513],
+             "CHL SEM": ["Chellis Seminar Room", 44.009364, -73.180513],
+             "CRH": ["Carr Hall", 44.010622, -73.178376],
+             "FIC": ["Freeman International Center", 44.013886, -73.180320],
+             "FIC CK": ["Freeman- Cook Seminar Room", 44.013886, -73.180320],
+             "FIC FR": ["Freeman Seminar Room", 44.013886, -73.180320],
+             "FIC HAM": ["Freeman- Hamlin Seminar Room", 44.013886, -73.180320],
+             "GFD": ["Gifford", 44.009738, -73.178995],
+             "GFD LCT": ["Gifford Annex Classroom", 44.009731, -73.179271],
+             "HLD": ["Hillcrest", 44.009857, -73.179857],
+             "HPB": ["Hepburn", 44.008547, -73.178795],
+             "HPB SEM": ["Hepburn Seminar Room", 44.008547, -73.178795],
+             "JHN": ["Johnson", 44.011480, -73.176649],
+             "KYN":  ["Kenyon Classroom", 44.003571, -73.178356],
+             "KYN NAT": ["Natatorium (Pool)", 44.003571, -73.178356],
+             "LAF": ["Laforce Hall", 44.010428, -73.180779],
+             "LIB": ["Davis Library", 44.009501, -73.174642],
+             "MCA": ["Mahaney Center for the Arts", 44.005193, -73.176151],
+             "MCA MUS": ["Mahaney- Museum of Art", 44.005193, -73.176151],
+             "MCA THE": ["Mahaney- Seeler Studio Theater", 44.005193, -73.176151],
+             "MDC": ["Mead Chapel", 44.009126, -73.179034],
+			 "MDC CHAPEL": ["Mead Chapel", 44.009126, -73.179034],
+             "MFH": ["Memorial Field House", 44.004447, -73.177367],
+             "MFH CLM": ["Field House- Climbing Wall", 44.004447, -73.177367],
+             "MFH FIT": ["Field House- Fitness Center", 44.004447, -73.177367],
+             "MFH MUS": ["Field House- Multi-Use Area", 44.004447, -73.177367],
+             "MFH NEL": ["Field House- Nelson Rec Center", 44.004447, -73.177367],
+             "MFH PEP":  ["Field House- Pepin Gym", 44.004447, -73.177367],
+             "MNR": ["Munroe", 44.010019, -73.177901],
+             "OCH": ["Old Chapel", 44.009098, -73.176071],
+             "PRS": ["Pearsons", 44.011120, -73.180297],
+             "PRS KAD": ["Pearsons Kade Room", 44.011120, -73.180297],
+             "PST": ["Chromatic", 44.008156, -73.182779],
+             "PST BMT": ["Chromatic Basement", 44.008156, -73.182779],
+             "RAJ": ["Rohatyn (Robert A Jones Conference Room)", 44.008068, -73.180575],
+			 "RAJ CON": ["Rohatyn (Robert A Jones Conference Room)", 44.008068, -73.180575],
+             "RCD B11": ["Ross Seminar Room B11", 44.010677, -73.181064],
+			 "RCD": ["Ross", 44.010677, -73.181064],
+             "SDL": ["Sunderland", 44.010786, -73.176506],
+             "SDL DNA": ["Dana Auditorium (in Sunderland)", 44.010842, -73.176310],
+             "SDL LAN": ["Sunderland Language Lab", 44.010786, -73.176506],
+             "WNS": ["Warner", 44.010169, -73.175476],
+             "WNS HEM": ["Warner Hemicycle", 44.010266, -73.175409],
+             "WTH": ["Wright", 44.011988, -73.177090],
+             "WTH SEM": ["Wright Seminar Room", 44.011988, -73.177090],
+             "WTH THE": ["Wright Theater", 44.011988, -73.177090]
+				 };
+	</script>
+	<form>
+  Starting Point: <input type="text" id="originCode" placeholder="3 digit building code (e.g. MBH)" size="30"><br>
+  Destination: <input type="text" id="destinationCode" placeholder="3 digit building code (e.g. MBH)" size="30"><br>
+  <input type="button" value="Route" onclick="route();">
+  <h5 id="path"></h5>
+</form>
+	<script> var theMarker = {};function route() {var originCode = document.getElementById('originCode').value.toUpperCase();
+			var destinationCode = document.getElementById('destinationCode').value.toUpperCase();
+			if (codes[originCode] != undefined && codes[destinationCode] != undefined){
+			document.getElementById("path").innerHTML = "Routing from " + codes[originCode][0] + " to " + codes[destinationCode][0];
+			}
+
+			else if (codes[destinationCode] == undefined && codes[originCode] == undefined) {
+			document.getElementById("path").innerHTML = "Neither of your codes are recognized. Try 3 (or 6) letter building codes."
+			}
+
+			else if (codes[destinationCode] == undefined) {
+        document.getElementById("path").innerHTML = "Your destination building code isn't recognized."
+
+			}
+
+			else if (codes[originCode] == undefined) {
+        document.getElementById("path").innerHTML = "Your starting building code isn't recognized."}
+
+
+
+			if (theMarker != undefined) {
+              mymap.removeLayer(theMarker);
+        };
+
+			theMarker = L.marker([codes[destinationCode][1], codes[destinationCode][2]]).addTo(mymap);}</script>
+    <div id="mapid" style="width: 100vw; height: 100%;">
+    </div>
+    <script> var mymap = L.map('mapid').setView([44.011419, -73.177980], 16);
+	L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token=pk.eyJ1Ijoid2lsbDIzOTciLCJhIjoiY2pvYWJ5a2sxMDAzdzNwbjJycmlzaXB6YiJ9.c-hvWE8i0ybvu7fbDVIkvg', {
+    attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
+    maxZoom: 18,
+    id: 'mapbox.streets',
+    accessToken: 'your.mapbox.access.token'}).addTo(mymap);
+
+</script>
+
+</body>
+</html>
