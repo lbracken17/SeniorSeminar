@@ -1,7 +1,7 @@
 body {
   font-family: Arial;
   margin: 0;
-  background:	#191970
+  background:	#e9f6fb
 
 }
 /* Header/Logo Title */
@@ -54,19 +54,19 @@ body {
 }
 
 .button{
-  background-color: white;
+  background-color: navy;
    border: none;
-   color: #191970;
+   color: white;
    padding: 20px;
    text-align: center;
    text-decoration: none;
    display: inline-block;
    font-size: 20px;
    font-family: Arial;
-   margin: 8px 580px;
+   margin: 8px 575px;
    cursor: pointer;
    left: 100;
-   border: 2px solid white;
+   border: 3px solid white;
    border-radius: 8px;
 }
 
@@ -80,14 +80,15 @@ body {
 input[type=text] {
     width: 100%;
     padding: 12px 20px;
-    margin: 8px 600px;
+    margin: 8px 560px;
     box-sizing: border-box;
     border: white;
     background-color: white;
     color: navy;
-    border: 1px solid #ccc;
+    border: 3px solid navy;
     border-radius: 4px;
-    width: 15%;
+    width: 20%;
+    font-size: 15px;
 
 }
 
@@ -96,5 +97,5 @@ input[type=text] {
   font-family: Arial;
   margin: 4px 2px;
   text-align: center;
-  color: white;
+  color: navy;
 }
