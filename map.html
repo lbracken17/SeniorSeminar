@@ -1,5 +1,6 @@
 <html>
 <head>
+    <link rel="stylesheet" href="design.css">
     <title>webViewSample</title>
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
           integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
@@ -11,6 +12,7 @@
 
 </head>
 <body>
+  <div class="title">MiddKid's Guide</div>
 	<script>
 	var codes = {
 			       "MBH": ["BiHall", 44.013613, -73.181267],
@@ -311,9 +313,9 @@
 
 	</script>
 	<form>
-  Starting Point: <input type="text" id="originCode" placeholder="3 digit building code (e.g. MBH)" size="30"><br>
-  Destination: <input type="text" id="destinationCode" placeholder="3 digit building code (e.g. MBH)" size="30"><br>
-  <input type="button" value="Route" onclick="route();">
+  <div class="descriptionText">Starting Point:</div> <input type="text" id="originCode" placeholder="3 digit building code (e.g. MBH)" size="30"><br>
+  <div class="descriptionText">Destination:</div> <input type="text" id="destinationCode" placeholder="3 digit building code (e.g. MBH)" size="30"><br>
+  <input class=button type="button" value="Route" onclick="route();">
   <h5 id="path"></h5>
 
 </form>
@@ -360,7 +362,8 @@
 
 			theMarker = L.marker([codes[destinationCode][1], codes[destinationCode][2]]).addTo(mymap);
     }</script>
-    <div id="mapid" style="width: 100vw; height: 100%;">
+    <div id="mapid" style="width: 70vw; height: 80%; left:220px; border: 5px solid navy;
+  border-radius: 8px;">
     </div>
     <script> var mymap = L.map('mapid').setView([44.011419, -73.177980], 16);
 
