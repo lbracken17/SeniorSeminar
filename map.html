@@ -313,7 +313,6 @@
 
 	</script>
 	<form>
-<<<<<<< HEAD
     <div class="center"><div class="dropbtn">Starting Point: <select id="originCode">
                     <option value="Allen">Allen</option>
                     <option value="Battell">Battell</option>
@@ -322,31 +321,14 @@
                   </select><div></div><br>
   <div class="descriptionText">Destination:</div> <div class="center"><input type="text" id="destinationCode" placeholder="3 digit building code (e.g. MBH)" size="30"></div><br>
   <div class="center"><input class=button type="button" value="Route" onclick="route();"></div>
-=======
-  <div class="dropbtn">Starting Point: <select id="originCode">
-                      <option value="Allen">Allen</option>
-                      <option value="Battell">Battell</option>
-                      <option value="Ross">Ross</option>
-                      <option value="Stew">Stewart</option>
-                    </select><div><br>
-  <div class="descriptionText">Destination:</div> <input type="text" id="destinationCode" placeholder="3 digit building code (e.g. MBH)" size="30"><br>
-  <input class=button type="button" value="Route" onclick="route();">
->>>>>>> 99a581c539e15d6da324ecf9d6e97feecbf26952
   <h5 id="path"></h5>
 
 </form>
 	<script> var theMarker = {}; var geoJSONLayer = L.geoJSON();
     function route() {var e = document.getElementById("originCode");
     var origin = e.options[e.selectedIndex].value;
-<<<<<<< HEAD
     var destinationCode = document.getElementById('destinationCode').value.toUpperCase();
     if (geoJSONLayer != null){
-=======
-
-    var destinationCode = document.getElementById('destinationCode').value.toUpperCase();
-    if (geoJSONLayer != null){
-
->>>>>>> 99a581c539e15d6da324ecf9d6e97feecbf26952
       mymap.removeLayer(geoJSONLayer);
     }
     if (codes[destinationCode] != undefined){
@@ -356,70 +338,42 @@
           "type": "LineString",
           "coordinates": stewDic[destinationCode]
         }];
-<<<<<<< HEAD
-=======
-
->>>>>>> 99a581c539e15d6da324ecf9d6e97feecbf26952
             var myStyle = {
             "color": "#ff7800",
             "weight": 5,
             "opacity": 0.65
           };
         }
-<<<<<<< HEAD
-=======
-
->>>>>>> 99a581c539e15d6da324ecf9d6e97feecbf26952
         if (origin == "Allen"){
           document.getElementById("path").innerHTML = "Routing from Allen to " + codes[destinationCode][0];
           var myLines = [{
             "type": "LineString",
             "coordinates": allenDic[destinationCode]
           }];
-<<<<<<< HEAD
-=======
-
->>>>>>> 99a581c539e15d6da324ecf9d6e97feecbf26952
               var myStyle = {
               "color": "#ff7800",
               "weight": 5,
               "opacity": 0.65
             };
           }
-<<<<<<< HEAD
-=======
-
->>>>>>> 99a581c539e15d6da324ecf9d6e97feecbf26952
           if (origin == "Ross"){
             document.getElementById("path").innerHTML = "Routing from Ross to " + codes[destinationCode][0];
             var myLines = [{
               "type": "LineString",
               "coordinates": rossDic[destinationCode]
             }];
-<<<<<<< HEAD
-=======
-
->>>>>>> 99a581c539e15d6da324ecf9d6e97feecbf26952
                 var myStyle = {
                 "color": "#ff7800",
                 "weight": 5,
                 "opacity": 0.65
               };
             }
-<<<<<<< HEAD
-=======
-
->>>>>>> 99a581c539e15d6da324ecf9d6e97feecbf26952
             if (origin == "Battell"){
               document.getElementById("path").innerHTML = "Routing from Battell to " + codes[destinationCode][0];
               var myLines = [{
                 "type": "LineString",
                 "coordinates": battellDic[destinationCode]
               }];
-<<<<<<< HEAD
-=======
-
->>>>>>> 99a581c539e15d6da324ecf9d6e97feecbf26952
                   var myStyle = {
                   "color": "#ff7800",
                   "weight": 5,
@@ -428,17 +382,9 @@
               }
         geoJSONLayer = L.geoJSON(myLines, {style: myStyle}).addTo(mymap);
       }
-<<<<<<< HEAD
 			else if (codes[destinationCode] == undefined || destinationCode=="") {
         document.getElementById("path").innerHTML = "Your destination building code isn't recognized."
 			}
-=======
-
-			else if (codes[destinationCode] == undefined || destinationCode=="") {
-        document.getElementById("path").innerHTML = "Your destination building code isn't recognized."
-			}
-
->>>>>>> 99a581c539e15d6da324ecf9d6e97feecbf26952
 			if (theMarker != undefined) {
               mymap.removeLayer(theMarker);
         };
@@ -452,7 +398,7 @@
       }
     }</script>
     <div class="center">
-    <div id="mapid" style="width: 70vw; height: 80%s; border: 5px solid navy;
+    <div id="mapid" style="width: 70vw; height: 80%; border: 5px solid navy;
   border-radius: 8px; margin:auto;">
 </div>
 </div>
