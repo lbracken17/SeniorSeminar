@@ -313,54 +313,101 @@
 
 	</script>
 	<form>
-  <div class="descriptionText">Starting Point:</div> <input type="text" id="originCode" placeholder="3 digit building code (e.g. MBH)" size="30"><br>
+  <div class="dropbtn">Starting Point: <select id="originCode">
+                      <option value="Allen">Allen</option>
+                      <option value="Battell">Battell</option>
+                      <option value="Ross">Ross</option>
+                      <option value="Stew">Stewart</option>
+                    </select><div><br>
   <div class="descriptionText">Destination:</div> <input type="text" id="destinationCode" placeholder="3 digit building code (e.g. MBH)" size="30"><br>
   <input class=button type="button" value="Route" onclick="route();">
   <h5 id="path"></h5>
 
 </form>
 	<script> var theMarker = {}; var geoJSONLayer = L.geoJSON();
-    function route() {var originCode = document.getElementById('originCode').value.toUpperCase();
-			var destinationCode = document.getElementById('destinationCode').value.toUpperCase();
-      if (geoJSONLayer != null){
+    function route() {var e = document.getElementById("originCode");
+    var origin = e.options[e.selectedIndex].value;
 
-        mymap.removeLayer(geoJSONLayer);
-      }
-			if (codes[originCode] != undefined && codes[destinationCode] != undefined){
-			document.getElementById("path").innerHTML = "Routing from " + codes[originCode][0] + " to " + codes[destinationCode][0];
-      var myLines = [{
-        "type": "LineString",
-        "coordinates": stewDic[destinationCode]
-			}];
+    var destinationCode = document.getElementById('destinationCode').value.toUpperCase();
+    if (geoJSONLayer != null){
 
-          var myStyle = {
-          "color": "#ff7800",
-          "weight": 5,
-          "opacity": 0.65
-        };
+      mymap.removeLayer(geoJSONLayer);
+    }
+    if (codes[destinationCode] != undefined){
+      if (origin == "Stew"){
+        document.getElementById("path").innerHTML = "Routing from Stew to " + codes[destinationCode][0];
+        var myLines = [{
+          "type": "LineString",
+          "coordinates": stewDic[destinationCode]
+        }];
 
+            var myStyle = {
+            "color": "#ff7800",
+            "weight": 5,
+            "opacity": 0.65
+          };
+        }
+
+        if (origin == "Allen"){
+          document.getElementById("path").innerHTML = "Routing from Allen to " + codes[destinationCode][0];
+          var myLines = [{
+            "type": "LineString",
+            "coordinates": allenDic[destinationCode]
+          }];
+
+              var myStyle = {
+              "color": "#ff7800",
+              "weight": 5,
+              "opacity": 0.65
+            };
+          }
+
+          if (origin == "Ross"){
+            document.getElementById("path").innerHTML = "Routing from Ross to " + codes[destinationCode][0];
+            var myLines = [{
+              "type": "LineString",
+              "coordinates": rossDic[destinationCode]
+            }];
+
+                var myStyle = {
+                "color": "#ff7800",
+                "weight": 5,
+                "opacity": 0.65
+              };
+            }
+
+            if (origin == "Battell"){
+              document.getElementById("path").innerHTML = "Routing from Battell to " + codes[destinationCode][0];
+              var myLines = [{
+                "type": "LineString",
+                "coordinates": battellDic[destinationCode]
+              }];
+
+                  var myStyle = {
+                  "color": "#ff7800",
+                  "weight": 5,
+                  "opacity": 0.65
+                };
+              }
         geoJSONLayer = L.geoJSON(myLines, {style: myStyle}).addTo(mymap);
       }
 
-			else if (codes[destinationCode] == undefined && codes[originCode] == undefined) {
-			document.getElementById("path").innerHTML = "Neither of your codes are recognized. Try 3 (or 6) letter building codes."
-			}
-
-			else if (codes[destinationCode] == undefined) {
+			else if (codes[destinationCode] == undefined || destinationCode=="") {
         document.getElementById("path").innerHTML = "Your destination building code isn't recognized."
-
 			}
-
-			else if (codes[originCode] == undefined) {
-        document.getElementById("path").innerHTML = "Your starting building code isn't recognized."}
-
-
 
 			if (theMarker != undefined) {
               mymap.removeLayer(theMarker);
         };
 
 			theMarker = L.marker([codes[destinationCode][1], codes[destinationCode][2]]).addTo(mymap);
+      if (destinationCode == "WNS" || destinationCode == "WNS HEM"){
+        theMarker.bindPopup("You will enter Warner on the 2nd floor. The staircase to the left only reaches floors 2, 3, and 5.").openPopup();}
+      else if (destinationCode == "MBH"){
+        theMarker.bindPopup("You will enter BiHall on either the 2nd or the 3rd floor depending on the entrance you use.").openPopup();}
+      else if (destinationCode == "FIC" || destinationCode == "FIC FR" || destinationCode == "FIC HAM" || destinationCode == "FIC CK"){
+        theMarker.bindPopup("FIC is really difficult to navigate. Plan to arrive early so you can search for your class.").openPopup();
+      }
     }</script>
     <div id="mapid" style="width: 70vw; height: 80%; left:220px; border: 5px solid navy;
   border-radius: 8px;">
